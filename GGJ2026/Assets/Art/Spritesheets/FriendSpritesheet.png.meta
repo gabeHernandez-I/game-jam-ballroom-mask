@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 2819465fed6e172429741c5ed62aace6
+guid: fea44b7b1c84a354ba870867c8fff4b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2024457581219552766
-    second: IMG_0175_0
+      213: 2640910468761017356
+    second: FriendSpritesheet_0
+  - first:
+      213: -2584572288847883733
+    second: FriendSpritesheet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0175_0
+      name: FriendSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 25
-        width: 285
-        height: 800
+        x: 47
+        y: 43
+        width: 487
+        height: 799
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 202ef805e8ea7e3e0800000000000000
-      internalID: -2024457581219552766
+      spriteID: c0c5c16441666a420800000000000000
+      internalID: 2640910468761017356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FriendSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 43
+        width: 487
+        height: 815
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2257ea6231c12cd0800000000000000
+      internalID: -2584572288847883733
       vertices: []
       indices: 
       edges: []
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_0175_0: -2024457581219552766
+      FriendSpritesheet_0: 2640910468761017356
+      FriendSpritesheet_1: -2584572288847883733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
