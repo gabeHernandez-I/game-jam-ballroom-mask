@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71279cd43e96c33448fcc4f4177752b4, type: 3}
+  m_Name: King
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  name: King Alphred
+  head: {fileID: -5127607870042398410, guid: 9c971b74b6e286a4a82d3cb70ad836f1, type: 3}
+  talkingBody: {fileID: -6130439581263250248, guid: 0fccb36df08c08347a738444f3f66822, type: 3}
+  font: {fileID: 12800000, guid: 078d1a41e65c9584d996466bde76e764, type: 3}
+  ink_name: king
+  scenes: []

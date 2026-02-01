@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71279cd43e96c33448fcc4f4177752b4, type: 3}
+  m_Name: Sibling
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  name: Luke
+  head: {fileID: -9202863798386258441, guid: fad797313f922664f83dce21fbc117dd, type: 3}
+  talkingBody: {fileID: -8296159469305389946, guid: 9d1e1df56566c0144aa11b7c5ef7032b, type: 3}
+  font: {fileID: 12800000, guid: 3e4a575637176d2408328fca0e950783, type: 3}
+  ink_name: Luke
+  scenes:
+  - {fileID: 4900000, guid: a2da1ca8f85d3f3428329221b5fad4f7, type: 3}
