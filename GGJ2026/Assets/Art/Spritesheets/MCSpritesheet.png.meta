@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2819465fed6e172429741c5ed62aace6
+guid: b91f98ee959de084ba7509986787e510
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2024457581219552766
-    second: IMG_0175_0
+      213: 60547736969742895
+    second: MCSpritesheet_0
+  - first:
+      213: -2379335158508963452
+    second: MCSpritesheet_1
+  - first:
+      213: -1220822692588983886
+    second: MCSpritesheet_2
+  - first:
+      213: -447454048929184308
+    second: MCSpritesheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_0175_0
+      name: MCSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 185
-        y: 25
-        width: 285
-        height: 800
+        x: 9
+        y: 21
+        width: 454
+        height: 859
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 202ef805e8ea7e3e0800000000000000
-      internalID: -2024457581219552766
+      spriteID: f2a090298db17d000800000000000000
+      internalID: 60547736969742895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 15
+        width: 453
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489b9739747eafed0800000000000000
+      internalID: -2379335158508963452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 21
+        width: 454
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b96f72ba34ce0fe0800000000000000
+      internalID: -1220822692588983886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MCSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 15
+        width: 453
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc50448c9e25ac9f0800000000000000
+      internalID: -447454048929184308
       vertices: []
       indices: 
       edges: []
@@ -135,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_0175_0: -2024457581219552766
+      MCSpritesheet_0: 60547736969742895
+      MCSpritesheet_1: -2379335158508963452
+      MCSpritesheet_2: -1220822692588983886
+      MCSpritesheet_3: -447454048929184308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
