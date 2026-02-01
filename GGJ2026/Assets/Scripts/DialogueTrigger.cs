@@ -7,9 +7,6 @@ using UnityEngine.InputSystem;
 public class DialogueTrigger : MonoBehaviour
 {
     [Header("Visual Cue")] [SerializeField]
-    private GameObject visualCue;
-    
-    [Header("Visual Cue")] [SerializeField]
     private TextAsset inkJSON;
 
     private bool playerInRange;
@@ -17,7 +14,6 @@ public class DialogueTrigger : MonoBehaviour
     private void Awake()
     {
         playerInRange = false;
-        visualCue.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
@@ -45,15 +41,15 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            visualCue.SetActive(true);
+            //visualCue.SetActive(true);
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                //DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }
         else
         {
-            visualCue.SetActive(false);
+            //visualCue.SetActive(false);
         }
     }
 }

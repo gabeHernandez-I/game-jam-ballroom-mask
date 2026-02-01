@@ -16,6 +16,6 @@ MonoBehaviour:
   head: {fileID: -9202863798386258441, guid: fad797313f922664f83dce21fbc117dd, type: 3}
   talkingBody: {fileID: -8296159469305389946, guid: 9d1e1df56566c0144aa11b7c5ef7032b, type: 3}
   font: {fileID: 12800000, guid: 3e4a575637176d2408328fca0e950783, type: 3}
-  ink_name: Luke
+  ink_name: sibling
   scenes:
   - {fileID: 4900000, guid: a2da1ca8f85d3f3428329221b5fad4f7, type: 3}

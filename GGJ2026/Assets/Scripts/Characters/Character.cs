@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public CharacterSO characterSO;
 
     public GameObject interactPopUp;
+    public TextAsset inkJSON;
     
     private PlayerMovement _playerMovement;
     private Rigidbody2D _rigidbody;
@@ -60,6 +61,12 @@ public class Character : MonoBehaviour
         {
             //Possess character
             CharacterSwapManager.instance.SwapCharacter(this, _currentSelectedCharacter);
+        }
+        
+        if (Keyboard.current.eKey.isPressed && _currentSelectedCharacter)
+        {
+            //Possess character
+            DialogueManager.instance.EnterDialogueMode(_currentSelectedCharacter.inkJSON, characterSO.ink_name);
         }
     }
 

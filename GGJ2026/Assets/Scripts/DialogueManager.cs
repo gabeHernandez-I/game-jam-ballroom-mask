@@ -5,25 +5,21 @@ using Ink.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 public class DialogueManager : MonoBehaviour
 {
-    private static DialogueManager instance;
-
-    [Header("Dialogue UI")] [SerializeField]
-    private GameObject dialoguePanel;
-    
-    [SerializeField]
-    private TextMeshProUGUI dialogueText;
+    public static DialogueManager instance;
     
     private Story currentStory;
 
-    [Header("Choices UI")] [SerializeField]
-    private GameObject[] choices;
-
-    private TextMeshProUGUI[] choicesText;
+    [Header("Choices UI")]
+    private List<Button> buttons;
 
     public bool dialogueIsPlaying;
+
+    private float _timer;
+    private float _maxInteractTime = 2;
     
     private void Awake()
     {
@@ -39,18 +35,25 @@ public class DialogueManager : MonoBehaviour
         return instance;
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON, string playerCharacter)
     {
+        if (_timer > 0)
+        {
+            return;
+        }
+        
         currentStory = new Story(inkJSON.text);
+        currentStory.variablesState["currently_possessed"] = playerCharacter;
         dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
+        _timer = _maxInteractTime;
+        DialogueUIManager.instance.ToggleDialogue();
     }
 
     private void ExitDialogueMode()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
+        DialogueUIManager.instance.ChangeDialogueText("");
+        DialogueUIManager.instance.ToggleDialogue();
     }
 
     private void ContinueStory()
@@ -58,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             // Set the text of the current dialogue line
-            dialogueText.text = currentStory.Continue();
+            DialogueUIManager.instance.ChangeDialogueText(currentStory.Continue());
             // Display choices for the dialogue line (if there are some)
             DisplayChoices();
         }
@@ -73,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         List<Choice> currentChoices = currentStory.currentChoices;
         
         // Check of the amount of choices provided is possible with our maximum amount
-        if (currentChoices.Count > choices.Length)
+        if (currentChoices.Count > buttons.Count)
         {
             Debug.LogError("More choices were given than the UI can support. Number of choices given: " +
                            currentChoices.Count);
@@ -83,54 +86,50 @@ public class DialogueManager : MonoBehaviour
         // Enable the choices
         foreach (Choice choice in currentChoices)
         {
-            choices[i].gameObject.SetActive(true);
-            choicesText[i].text = choice.text;
+            buttons[i].visible = true;
+            buttons[i].text = choice.text;
+
+            var index = i;
+            buttons[i].clicked += () => MakeChoice(index);
             i++;
         }
+        
         // Make sure we hide the remaining unused buttons
-        for (int j = i; j < choices.Length; j++)
+        for (int j = i; j < buttons.Count; j++)
         {
-            choices[j].gameObject.SetActive(false);
+            buttons[j].visible = false;
         }
         
         // Select a first selected choice
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
 
-    }
-
-    private IEnumerator SelectFirstChoice()
-    {
-        // The event system requires us to clear the selected option first, then
-        // wait for one frame to set a new one
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
     }
 
     public void MakeChoice(int choiceIndex)
     {
+        Debug.Log(choiceIndex);
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
         
         // Collect all the choices 
-        choicesText = new TextMeshProUGUI[choices.Length];
+        buttons = DialogueUIManager.instance.GetButtonList();
+        DialogueUIManager.instance.GetContinueButton().clicked += ContinueStory;
         int i = 0;
-        foreach (GameObject choice in choices)
-        {
-            choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
-            i++;
-        }
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        if (_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
         // Do nothing if dialogue is not playing
         if (!dialogueIsPlaying)
         {

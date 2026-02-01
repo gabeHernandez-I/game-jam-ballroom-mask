@@ -128,6 +128,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 984150804}
     m_Modifications:
     - target: {fileID: 944406221074089161, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 3385144288dd0a243963008674eeef6c, type: 3}
+    - target: {fileID: 944406221074089161, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
       propertyPath: characterSO
       value: 
       objectReference: {fileID: 11400000, guid: 3401a2bb124d6e64e96384a41ddab8eb, type: 2}
@@ -745,6 +749,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2507092882434992022, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
   m_PrefabInstance: {fileID: 2051340688}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1281492698 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2100841595033167196, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
+  m_PrefabInstance: {fileID: 1607705835464267432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1333307331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1136,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2507092882434992022, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
   m_PrefabInstance: {fileID: 1607705835464267432}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1830989445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281492698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e598c1215b97774b9adc549f754087e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  inkJSON: {fileID: 0}
 --- !u!1001 &1904371893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1318,6 +1340,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 984150804}
     m_Modifications:
     - target: {fileID: 944406221074089161, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: af1ff532ddc84b048bf137b4530fc8f5, type: 3}
+    - target: {fileID: 944406221074089161, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
       propertyPath: characterSO
       value: 
       objectReference: {fileID: 11400000, guid: b7c8c17417dca484d907624d505e3df2, type: 2}
@@ -1410,6 +1436,7 @@ GameObject:
   - component: {fileID: 2139913691}
   - component: {fileID: 2139913693}
   - component: {fileID: 2139913694}
+  - component: {fileID: 2139913695}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -1479,6 +1506,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8082ff8f8fbb4db3be6eb7fb8676cbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+--- !u!114 &2139913695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139913690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c3258b5bb672e4bbb28e7bcde7f48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  choices: []
+  dialogueIsPlaying: 0
 --- !u!1 &2144141054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1653,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2100841595033167196, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
+      insertIndex: 9
+      addedObject: {fileID: 1830989445}
   m_SourcePrefab: {fileID: 100100000, guid: 37eddeea0608cf7439f95f1221dc903e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
