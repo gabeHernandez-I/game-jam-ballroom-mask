@@ -1,0 +1,15 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI/SettingsButton.uss?fileID=7433441132597879392&amp;guid=a78685452bb8e5144b04474c5bd65dbc&amp;type=3#SettingsButton"/>
+    <ui:VisualElement name="Dialogue" style="flex-grow: 1; visibility: hidden;">
+        <ui:Image name="BialogueBackground" style="background-image: url(&quot;project://database/Assets/Art/UI/UITextBox.png?fileID=2800000&amp;guid=87e6e23770018164fb6729379a1694f7&amp;type=3#UITextBox&quot;); left: 0; bottom: 0; position: absolute; height: 360px; width: 1920px;">
+            <ui:Label text="Blah Blah Blah Blah BlahBlahBlahBlah" name="DialogueTest" style="left: 50px; bottom: 61px; height: 246px; width: 1020px; position: absolute; font-size: 50px; white-space: normal;"/>
+        </ui:Image>
+    </ui:VisualElement>
+    <ui:Button text="" name="Settings" icon-image="project://database/Assets/Art/UI/BookIcon.png?fileID=21300000&amp;guid=b9883cd45fef5ad4e90e2a2d4ca9bf45&amp;type=3#BookIcon" class="settings-button" style="top: 0; right: 0; position: absolute; width: 250px; height: 250px; visibility: visible;"/>
+    <ui:Image name="SettingsBook" source="project://database/Assets/Art/UI/BookOpen.png?fileID=21300000&amp;guid=df5c4fcae3d60534ab244570ae0e688d&amp;type=3#BookOpen" style="position: absolute; visibility: hidden; width: 1923px; height: 1076px; justify-content: space-evenly; align-items: flex-start;">
+        <ui:Button text="Close" name="SettingsClose" class="settings-button" style="top: 322px; left: 1095px; height: 112px; width: 292px;"/>
+    </ui:Image>
+    <ui:Image name="CharacterUI" source="project://database/Assets/Art/UI/Dial.png?fileID=2800000&amp;guid=767da03f231c72744abc139652b041c3&amp;type=3#Dial" style="left: 0; top: 123px; position: absolute; height: 277px; width: 313px; rotate: 180deg;">
+        <ui:Image name="CharacterImage" source="project://database/Resources/unity_builtin_extra?fileID=10907&amp;guid=0000000000000000f000000000000000&amp;type=0#Background" style="position: absolute; height: 214px; top: 166px; width: 201px; left: 58px;"/>
+    </ui:Image>
+</ui:UXML>
