@@ -15,6 +15,6 @@ MonoBehaviour:
   name: Mathilde
   head: {fileID: -2363526735500604096, guid: 508ee3b7abebac244983f5c4860b6964, type: 3}
   talkingBody: {fileID: 8418452405035448950, guid: e9037edc3a931154d958126d1cf581e2, type: 3}
-  font: {fileID: 12800000, guid: 3e5c68e404e18e447bbb8e3a9f5a9de8, type: 3}
+  font: {fileID: 12800000, guid: 76143a162cb99614291e5a281891ab44, type: 3}
   ink_name: royal_advisor
   scenes: []

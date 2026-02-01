@@ -1,5 +1,5 @@
 using System;
-using Ink.UnityIntegration;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,10 +15,11 @@ public class Character : MonoBehaviour
     private BoxCollider2D _triggerCollider;
     private Animator _animator;
     private Character _currentSelectedCharacter;
-    private int _currentScene;
+    private Dictionary<string, int> sceneDictionary;
     
     private void Awake()
     {
+        sceneDictionary = new Dictionary<string, int>();
         _playerMovement = GetComponent<PlayerMovement>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _triggerCollider = GetComponent<BoxCollider2D>();
@@ -65,8 +66,9 @@ public class Character : MonoBehaviour
         
         if (Keyboard.current.eKey.isPressed && _currentSelectedCharacter)
         {
+            sceneDictionary.TryAdd(_currentSelectedCharacter.characterSO.ink_name, 1);
             //Possess character
-            DialogueManager.instance.EnterDialogueMode(_currentSelectedCharacter.inkJSON, characterSO.ink_name);
+            DialogueManager.instance.EnterDialogueMode(_currentSelectedCharacter.inkJSON, characterSO.ink_name, sceneDictionary[_currentSelectedCharacter.characterSO.ink_name]);
         }
     }
 
@@ -99,6 +101,4 @@ public class Character : MonoBehaviour
         _triggerCollider.enabled = false;
         _animator.SetFloat("Speed", 0);
     }
-
-    public TextAsset GetScene() => characterSO.scenes[_currentScene];
 }

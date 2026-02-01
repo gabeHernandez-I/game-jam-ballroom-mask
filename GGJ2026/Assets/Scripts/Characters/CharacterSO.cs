@@ -1,10 +1,10 @@
-using Ink.UnityIntegration;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "New Character", menuName = "ScriptableObject/Character")]
 public class CharacterSO : ScriptableObject
 {
-    public string name;
+    [FormerlySerializedAs("name")] public string characterName;
     public Sprite head;
     public Sprite talkingBody;
     public Font font;

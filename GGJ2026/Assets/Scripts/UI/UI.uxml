@@ -3,35 +3,40 @@
     <Style src="project://database/Assets/Scripts/UI/addcharacterfont.uss?fileID=7433441132597879392&amp;guid=1a50ef36e633a36458bf541e10f7a11b&amp;type=3#addcharacterfont"/>
     <ui:VisualElement name="Dialogue" style="flex-grow: 1; visibility: hidden; display: flex; overflow: visible;">
         <ui:Image name="BialogueBackground" style="background-image: url(&quot;project://database/Assets/Art/UI/UITextBox.png?fileID=2800000&amp;guid=87e6e23770018164fb6729379a1694f7&amp;type=3#UITextBox&quot;); left: 0; bottom: 0; position: absolute; height: 360px; width: 1920px;">
-            <ui:Label text="Blah Blah Blah Blah Blah Blah Blah Blah" name="DialogueText" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="left: 53px; bottom: 55px; height: 254px; width: 1038px; position: absolute; font-size: 50px; white-space: normal; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=3c331c185dbbc2743ab91430a1fe307f&amp;type=3#NotInter-Regular&quot;);">
+            <ui:Label text="Blah Blah Blah Blah Blah Blah Blah Blah" name="DialogueText" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="left: 53px; bottom: 55px; height: 254px; width: 1038px; position: absolute; font-size: 50px; white-space: normal; -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=3c331c185dbbc2743ab91430a1fe307f&amp;type=3#NotInter-Regular&quot;); -unity-text-auto-size: best-fit 10px 3564px; -unity-text-generator: advanced;">
                 <Bindings>
                     <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
                 </Bindings>
             </ui:Label>
             <ui:VisualElement name="OptionButtons" style="flex-grow: 1; position: absolute; height: 256px; width: 760px; top: 50px; left: 1104px; flex-direction: row; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap;">
-                <ui:Button text="Button" name="Option" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="height: 119px; width: 370px; font-size: 60px;">
+                <ui:Button text="Button" name="Option1" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="height: 119px; width: 370px; font-size: 60px; -unity-text-auto-size: best-fit 10px 1157px; -unity-text-generator: advanced; background-color: rgba(188, 188, 188, 0);">
                     <Bindings>
                         <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Button>
-                <ui:Button text="Button" name="Option" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="height: 119px; width: 370px;">
+                <ui:Button text="Button" name="Option2" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="height: 119px; width: 370px; -unity-text-auto-size: best-fit 10px 1715px; -unity-text-generator: advanced; background-color: rgba(188, 188, 188, 0);">
                     <Bindings>
                         <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Button>
-                <ui:Button text="Button" name="Option" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="height: 119px; width: 370px;">
+                <ui:Button text="Button" name="Option3" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="height: 119px; width: 370px; -unity-text-generator: advanced; -unity-text-auto-size: best-fit 10px 987px; background-color: rgba(188, 188, 188, 0);">
                     <Bindings>
                         <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Button>
-                <ui:Button text="Button" name="Option" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="height: 119px; width: 370px;">
+                <ui:Button text="Button" name="Option" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="height: 119px; width: 370px; position: absolute; top: 1699px;">
                     <Bindings>
                         <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Button>
             </ui:VisualElement>
         </ui:Image>
-        <ui:Button text="Next" name="ContinueButton" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="position: absolute; top: 914px; left: 988px;">
+        <ui:Button text="Next " name="ContinueButton" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="position: absolute; top: 903px; left: 1536px;">
+            <Bindings>
+                <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Button>
+        <ui:Button text="Leave&#10;" name="LeaveButton" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" class="settings-button" style="position: absolute; top: 903px; left: 1693px;">
             <Bindings>
                 <ui:DataBinding property="style.unityFontDefinition" data-source-path="font" binding-mode="ToTarget"/>
             </Bindings>
@@ -42,7 +47,7 @@
         <ui:Button text="Close" name="SettingsClose" class="settings-button" style="top: 322px; left: 1095px; height: 112px; width: 292px;"/>
     </ui:Image>
     <ui:Image name="CharacterUI" source="project://database/Assets/Art/UI/Dial.png?fileID=2800000&amp;guid=767da03f231c72744abc139652b041c3&amp;type=3#Dial" style="left: 0; top: 123px; position: absolute; height: 277px; width: 313px; rotate: 180deg;">
-        <ui:Image name="CharacterImage" source="project://database/Assets/Art/CharacterHeads/ProtagonistHead.png?fileID=3744540079418827998&amp;guid=4b1b36ddfedc554489891d653fb4d2e8&amp;type=3#ProtagonistHead_0" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="position: absolute; height: 214px; top: 166px; width: 201px; left: 58px; rotate: 180deg;">
+        <ui:Image name="CharacterImage" source="project://database/Assets/Art/CharacterHeads/ProtagonistHead.png?fileID=3744540079418827998&amp;guid=4b1b36ddfedc554489891d653fb4d2e8&amp;type=3#ProtagonistHead_0" data-source="project://database/Assets/Scripts/Characters/ScriptableObjects/Protagonist.asset?fileID=11400000&amp;guid=009d0dff58fb3864ea2f59264d454e37&amp;type=2#Protagonist" style="position: best-fit; height: 214px; top: 160px; width: 201px; left: 47px; rotate: 180deg;">
             <Bindings>
                 <ui:DataBinding property="source" data-source-path="head" binding-mode="ToTarget"/>
             </Bindings>

@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         return instance;
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, string playerCharacter)
+    public void EnterDialogueMode(TextAsset inkJSON, string playerCharacter, int sceneNumber)
     {
         if (_timer > 0)
         {
@@ -44,6 +44,8 @@ public class DialogueManager : MonoBehaviour
         
         currentStory = new Story(inkJSON.text);
         currentStory.variablesState["currently_possessed"] = playerCharacter;
+        currentStory.variablesState["scene"] = sceneNumber;
+        ContinueStory();
         dialogueIsPlaying = true;
         _timer = _maxInteractTime;
         DialogueUIManager.instance.ToggleDialogue();
@@ -52,7 +54,6 @@ public class DialogueManager : MonoBehaviour
     private void ExitDialogueMode()
     {
         dialogueIsPlaying = false;
-        DialogueUIManager.instance.ChangeDialogueText("");
         DialogueUIManager.instance.ToggleDialogue();
     }
 
@@ -82,6 +83,7 @@ public class DialogueManager : MonoBehaviour
                            currentChoices.Count);
         }
 
+        currentChoices.RemoveAt(currentChoices.Count - 1);
         int i = 0;
         // Enable the choices
         foreach (Choice choice in currentChoices)
@@ -109,7 +111,6 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log(choiceIndex);
         currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
     }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -120,6 +121,7 @@ public class DialogueManager : MonoBehaviour
         // Collect all the choices 
         buttons = DialogueUIManager.instance.GetButtonList();
         DialogueUIManager.instance.GetContinueButton().clicked += ContinueStory;
+        DialogueUIManager.instance.GetLeaveButton().clicked += ExitDialogueMode;
         int i = 0;
     }
 
@@ -140,7 +142,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
-                ContinueStory();
+                //ContinueStory();
             }
         }
     }
