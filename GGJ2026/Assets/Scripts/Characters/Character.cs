@@ -4,20 +4,38 @@ using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
+    public CharacterSO characterSO;
+    
     private PlayerMovement _playerMovement;
-
+    private Rigidbody2D _rigidbody;
+    private BoxCollider2D _triggerCollider;
+    
     private Character _currentSelectedCharacter;
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _triggerCollider = GetComponent<BoxCollider2D>();
+    }
+
+    private void Start()
+    {
+        CharacterSwapManager.instance.OnCharacterSwap += OnCharacterSwap;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent(out Character character))
+        if (other.TryGetComponent(out Character character) && _playerMovement.enabled)
         {
-            Debug.Log(character.name);
             _currentSelectedCharacter = character;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (_currentSelectedCharacter && other.TryGetComponent(out Character character) == _currentSelectedCharacter)
+        {
+            _currentSelectedCharacter = null;
         }
     }
 
@@ -25,18 +43,33 @@ public class Character : MonoBehaviour
     {
         if (Keyboard.current.eKey.isPressed && _currentSelectedCharacter)
         {
-            _currentSelectedCharacter.ActivateCharacter();
-            DeactivateCharacter();
+            CharacterSwapManager.instance.SwapCharacter(this, _currentSelectedCharacter);
         }
     }
 
-    public void ActivateCharacter()
+    private void OnCharacterSwap(CharacterSO toCharacter)
+    {
+        if (toCharacter == characterSO)
+        {
+            ActivateCharacter();
+        }
+        else
+        {
+            DeactivateCharacter();
+        }
+    }
+    
+    private void ActivateCharacter()
     {
         _playerMovement.enabled = true;
+        _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        _triggerCollider.enabled = true;
     }
 
     private void DeactivateCharacter()
     {
         _playerMovement.enabled = false;
+        _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        _triggerCollider.enabled = false;
     }
 }
