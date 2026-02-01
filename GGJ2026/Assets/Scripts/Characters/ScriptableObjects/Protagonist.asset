@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71279cd43e96c33448fcc4f4177752b4, type: 3}
   m_Name: Protagonist
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
-  name: 0
+  name: Isolde
+  head: {fileID: 3744540079418827998, guid: 4b1b36ddfedc554489891d653fb4d2e8, type: 3}
+  talkingBody: {fileID: 5905957634309593241, guid: c47c761724e274d4a979301ac065546c, type: 3}
+  font: {fileID: 12800000, guid: db8402c8f3435324ca1c2c9909fe06c7, type: 3}

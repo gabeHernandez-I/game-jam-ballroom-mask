@@ -22,7 +22,7 @@ public class CharacterSwapManager : MonoBehaviour
             return;
 
         _timer = timerMaxTime;
-        Debug.Log(homeCharacter.characterSO.name.ToString() + targetCharacter.characterSO.name.ToString());
+        
         OnCharacterSwap?.Invoke(targetCharacter.characterSO);
     }
 

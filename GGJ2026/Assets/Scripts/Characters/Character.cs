@@ -9,13 +9,15 @@ public class Character : MonoBehaviour
     private PlayerMovement _playerMovement;
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _triggerCollider;
-    
+    private Animator _animator;
     private Character _currentSelectedCharacter;
+    
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _triggerCollider = GetComponent<BoxCollider2D>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -71,5 +73,6 @@ public class Character : MonoBehaviour
         _playerMovement.enabled = false;
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         _triggerCollider.enabled = false;
+        _animator.SetTrigger("GoIdle");
     }
 }

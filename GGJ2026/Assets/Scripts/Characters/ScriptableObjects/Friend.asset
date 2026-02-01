@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71279cd43e96c33448fcc4f4177752b4, type: 3}
+  m_Name: Friend
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterSO
+  name: Nicola
+  head: {fileID: -4165929319518032852, guid: 035fdc6d64ed8a741918a1654f1e23fd, type: 3}
+  talkingBody: {fileID: 2973093552332344111, guid: 77808a91bb8f3964b9bfff790305df4f, type: 3}
+  font: {fileID: 12800000, guid: a2a4ac92e242a9941ac191529b3e9ce6, type: 3}
