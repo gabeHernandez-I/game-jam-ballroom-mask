@@ -16,3 +16,5 @@ MonoBehaviour:
   head: {fileID: -5127607870042398410, guid: 9c971b74b6e286a4a82d3cb70ad836f1, type: 3}
   talkingBody: {fileID: -6130439581263250248, guid: 0fccb36df08c08347a738444f3f66822, type: 3}
   font: {fileID: 12800000, guid: 078d1a41e65c9584d996466bde76e764, type: 3}
+  ink_name: king
+  scenes: []

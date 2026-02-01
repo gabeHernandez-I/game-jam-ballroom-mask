@@ -16,3 +16,5 @@ MonoBehaviour:
   head: {fileID: -4165929319518032852, guid: 035fdc6d64ed8a741918a1654f1e23fd, type: 3}
   talkingBody: {fileID: 2973093552332344111, guid: 77808a91bb8f3964b9bfff790305df4f, type: 3}
   font: {fileID: 12800000, guid: a2a4ac92e242a9941ac191529b3e9ce6, type: 3}
+  ink_name: best_friend
+  scenes: []

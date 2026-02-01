@@ -16,3 +16,5 @@ MonoBehaviour:
   head: {fileID: -5068171143309296413, guid: 5bbb2273030737740974fa188e89fa77, type: 3}
   talkingBody: {fileID: 175323813093563107, guid: a79a3994711e342419fb5032f747b28c, type: 3}
   font: {fileID: 12800000, guid: 76143a162cb99614291e5a281891ab44, type: 3}
+  ink_name: apprentice
+  scenes: []

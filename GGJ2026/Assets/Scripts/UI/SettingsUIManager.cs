@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 public class SettingsUIManager : MonoBehaviour
 {
+    //This just turns on and off the book
     private UIDocument _uiDocument;
 
     private VisualElement _pauseMenu;
@@ -12,8 +13,10 @@ public class SettingsUIManager : MonoBehaviour
     private void Awake()
     {
         _uiDocument = GetComponent<UIDocument>();
-
+        
+        //Open book
         _pauseMenu = _uiDocument.rootVisualElement.Q<VisualElement>("SettingsBook");
+        //Button book
         _settingsButton = _uiDocument.rootVisualElement.Q<Button>("Settings");
 
         Button closeButton = _pauseMenu.Q<Button>("SettingsClose");

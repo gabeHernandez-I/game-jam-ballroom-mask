@@ -18,6 +18,7 @@ public class CharacterSwapManager : MonoBehaviour
 
     public void SwapCharacter(Character homeCharacter, Character targetCharacter )
     {
+        //Gets from the Character script fires off event to tell everything subscribed whos the new active character
         if(_timer > 0)
             return;
 

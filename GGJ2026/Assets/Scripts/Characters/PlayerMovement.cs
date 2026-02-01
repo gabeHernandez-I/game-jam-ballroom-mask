@@ -21,8 +21,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         _direction = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
+        //if no input don't check
         if (_direction.magnitude > 0)
         {
+            //Makes the character look the way its moving
             _spriteRenderer.flipX = _direction.x < 0;     
         }
         
