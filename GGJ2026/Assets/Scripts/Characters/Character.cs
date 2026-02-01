@@ -74,5 +74,6 @@ public class Character : MonoBehaviour
         _rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         _triggerCollider.enabled = false;
         _animator.SetTrigger("GoIdle");
+        _animator.SetFloat("Speed", 0);
     }
 }
